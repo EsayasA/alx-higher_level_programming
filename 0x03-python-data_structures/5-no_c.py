@@ -2,6 +2,5 @@
 
 
 def no_c(my_string):
-    rep = [y for y in my_string if y != 'c' and y != 'C']
+    rep = [z for z in my_string if z != 'c' and z != 'C']
     return ("".join(rep))
-
