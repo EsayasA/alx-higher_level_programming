@@ -6,9 +6,9 @@ class Square:
     """Represent a function."""
 
     def __init__(self, size=0):
-        """Initialize function.
+        """Initialize function square.
         Args:
-            size (int):length.
+            size (int): size.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
