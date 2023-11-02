@@ -5,14 +5,14 @@
 def matrix_divided(matrix, div):
     """Divides all elements of matrix by div.
     Args:
-        matrix: List of integers
-        div: divider
+        matrix: List of lists containing int or float
+        div: number to divide matrix by
     Returns:
-        list: List of divided elements.
+        list: List of lists representing divided matrix.
     Raises:
         TypeError: If matrix is not list of lists containing int or float.
-        TypeError: If size is deifferent.
-        TypeError: If div is not integer.
+        TypeError: If sublists are not all same size.
+        TypeError: If div is not int or float.
         ZeroDivisionError: If div is zero.
     """
     if not isinstance(div, (int, float)):
@@ -35,4 +35,3 @@ def matrix_divided(matrix, div):
 if __name__ == "__main__":
     import doctest
     doctest.testfile("tests/2-matrix_divided.txt")
-
