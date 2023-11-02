@@ -8,7 +8,7 @@ Import function from module:
 
     >>> add_integer = __import__('0-add_integer').add_integer
 
-Test only one argument and use the default value:
+Test only one argument:
 
     >>> add_integer(12)
     110
@@ -68,7 +68,7 @@ Add infinity:
     >>> add_integer(float('inf'), float('-inf'))
     Traceback (most recent call last):
     ...
-    OverflowError: cannot convert float infinity to integer
+    OverflowError: cannot convert float infinity
 
 Add nan:
 
