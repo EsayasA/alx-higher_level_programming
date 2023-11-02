@@ -3,17 +3,17 @@
 
 
 def add_integer(a, b=98):
-    """Adds two integers.
+    """Adds two numbers.
 
     Args:
-        a: the first integer.
-        b: the second integer, default 98.
+        a: first number.
+        b: second number.
 
     Raises:
-        TypeError: if a, b are not int, float.
+        TypeError: if a and b are not either int or float.
 
     Returns:
-        The sum of the two integers.
+        The sum of two numbers.
     """
 
     if type(a) not in (int, float):
