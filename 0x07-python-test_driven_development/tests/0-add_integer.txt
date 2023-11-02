@@ -82,28 +82,28 @@ Test first arg invalid:
     >>> add_integer("foo", 0)
     Traceback (most recent call last):
         ...
-    TypeError: it should not be string
+    TypeError: a must be an integer
 
 Test second arg invalid:
 
     >>> add_integer(123123, [])
     Traceback (most recent call last):
         ...
-    TypeError: b can't be empty
+    TypeError: b must be an integer
 
 Test both args invalid:
 
     >>> add_integer(None, None)
     Traceback (most recent call last):
         ...
-    TypeError: both parameter should be integer
+    TypeError: a must be an integer
 
 Test two strings:
 
     >>> add_integer("foo", "bar")
     Traceback (most recent call last):
         ...
-    TypeError: both parameters must be integer
+    TypeError: a must be an integer
 
 Test float overflow:
     >>> add_integer(float('inf'), 0)
