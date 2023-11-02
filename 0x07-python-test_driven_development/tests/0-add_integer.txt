@@ -8,50 +8,50 @@ Import function from module:
 
     >>> add_integer = __import__('0-add_integer').add_integer
 
-Test only one argument:
+Test one int argument:
 
-    >>> add_integer(12)
-    110
+    >>> add_integer(2)
+    100
 
-Test another only one argument:
+Test one int argument and check default second:
 
     >>> add_integer(0)
     98
 
-Test one float argument with another default:
+Test one float:
 
-    >>> add_integer(100.9)
-    198
+    >>> add_integer(123.9)
+    221
 
-Test one negative argument:
+Test one negative float:
 
-    >>> add_integer(-98.5)
-    0
+    >>> add_integer(-95.5)
+    3
 
-Test two parameters:
+Test two integers:
 
-    >>> add_integer(0, 6)
-    6
+    >>> add_integer(10, 5)
+    15
 
-Test two large parameters:
+Test two big integers:
 
     >>> add_integer(999999998, 999999999)
     1999999997
 
-Test positive and negative numbers:
+Test positive, negative integers:
 
     >>> add_integer(34263478, -89234582395)
     -89200318917
 
-Test negative and positive numbers:
+Test negative, positive integers:
 
     >>> add_integer(-13947692, 57234)
     -13890458
 
 Test an integer and a float:
 
-    >>> add_integer(100, 7.987)
-    107
+    >>> add_integer(123, 7.987)
+    130
 
 Test a float and an integer:
 
@@ -60,7 +60,7 @@ Test a float and an integer:
 
 Test two floats:
 
-    >>> add_integer(0.8, 0.6)
+    >>> add_integer(0.9, 0.9)
     0
 
 Add infinity:
@@ -68,7 +68,7 @@ Add infinity:
     >>> add_integer(float('inf'), float('-inf'))
     Traceback (most recent call last):
     ...
-    OverflowError: cannot convert float infinity
+    OverflowError: cannot convert float infinity to integer
 
 Add nan:
 
@@ -110,3 +110,4 @@ Test float overflow:
     Traceback (most recent call last):
     ...
     OverflowError: cannot convert float infinity to integer
+
