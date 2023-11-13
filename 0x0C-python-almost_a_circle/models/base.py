@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Defines a base model class."""
+"""Defines base class."""
 import json
 import csv
 import turtle
@@ -9,19 +9,19 @@ import turtle
 class Base:
     """Base model.
 
-    This Represents the "base" for all other classes in project 0x0C*.
+    This reps as "base" class to the other subclasses.
 
     Private Class Attributes:
-        __nb_object (int): Number of instantiated Bases.
+        __nb_object (int): instant class.
     """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize a new Base.
+        """Initialize Base class.
 
         Args:
-            id (int): The identity of the new Base.
+            id (int): Id of the class.
         """
         if id is not None:
             self.id = id
@@ -31,10 +31,10 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Return the JSON serialization of a list of dicts.
+        """Return JSON serialization from the dictioneries.
 
         Args:
-            list_dictionaries (list): A list of dictionaries.
+            list_dictionaries (list): Dictionaries.
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
@@ -42,10 +42,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Write the JSON serialization of a list of objects to a file.
+        """Write JSON to a file.
 
         Args:
-            list_objs (list): A list of inherited Base instances.
+            list_objs (list): A list of dict.
         """
         filename = cls.__name__ + ".json"
         with open(filename, "w") as jsonfile:
@@ -57,13 +57,13 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Return the deserialization of a JSON string.
+        """Return deserialization of a JSON.
 
         Args:
-            json_string (str): A JSON str representation of a list of dicts.
+            json_string (str): A JSON.
         Returns:
-            If json_string is None or empty - an empty list.
-            Otherwise - the Python list represented by json_string.
+            Empty list.
+            Otherwise - List.
         """
         if json_string is None or json_string == "[]":
             return []
@@ -71,10 +71,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Return a class instantied from a dictionary of attributes.
+        """Return class.
 
         Args:
-            **dictionary (dict): Key/value pairs of attributes to initialize.
+            **dictionary (dict): Key/value pairs.
         """
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
@@ -86,7 +86,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Return a list of classes instantiated from a file of JSON strings.
+        """Return list of the classes.
 
         Reads from `<cls.__name__>.json`.
 
@@ -104,10 +104,10 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Write the CSV serialization of a list of objects to a file.
+        """Write CSV serialization to the file.
 
         Args:
-            list_objs (list): A list of inherited Base instances.
+            list_objs (list): A list.
         """
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csvfile:
@@ -124,7 +124,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Return a list of classes instantiated from a CSV file.
+        """Return the list of classes.
 
         Reads from `<cls.__name__>.csv`.
 
@@ -148,11 +148,11 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Draw Rectangles and Squares using the turtle module.
+        """Draw Rectangles and Squares.
 
         Args:
-            list_rectangles (list): A list of Rectangle objects to draw.
-            list_squares (list): A list of Square objects to draw.
+            list_rectangles (list): List.
+            list_squares (list): List.
         """
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
