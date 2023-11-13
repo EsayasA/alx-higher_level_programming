@@ -1,4 +1,3 @@
-test_base.py
 #!/usr/bin/python3
 """Defines unittests for base.py.
 
@@ -20,7 +19,7 @@ from models.square import Square
 
 
 class TestBase_instantiation(unittest.TestCase):
-    """Unittests for Base class."""
+    """Unittests for testing instantiation of the Base class."""
 
     def test_no_arg(self):
         b1 = Base()
@@ -107,7 +106,7 @@ class TestBase_instantiation(unittest.TestCase):
 
 
 class TestBase_to_json_string(unittest.TestCase):
-    """Unittests to tes for to_json_string method of Base class."""
+    """Unittests for testing to_json_string method of Base class."""
 
     def test_to_json_string_rectangle_type(self):
         r = Rectangle(10, 7, 2, 8, 6)
@@ -153,7 +152,7 @@ class TestBase_to_json_string(unittest.TestCase):
 
 
 class TestBase_save_to_file(unittest.TestCase):
-    """Unittests to test for save_to_file method of Base class."""
+    """Unittests for testing save_to_file method of Base class."""
 
     @classmethod
     def tearDown(self):
@@ -231,7 +230,7 @@ class TestBase_save_to_file(unittest.TestCase):
 
 
 class TestBase_from_json_string(unittest.TestCase):
-    """Unittests to test for from_json_string method of Base class."""
+    """Unittests for testing from_json_string method of Base class."""
 
     def test_from_json_string_type(self):
         list_input = [{"id": 89, "width": 10, "height": 4}]
@@ -285,7 +284,7 @@ class TestBase_from_json_string(unittest.TestCase):
 
 
 class TestBase_create(unittest.TestCase):
-    """Unittests to test for create method of Base class."""
+    """Unittests for testing create method of Base class."""
 
     def test_create_rectangle_original(self):
         r1 = Rectangle(3, 5, 1, 2, 7)
@@ -337,7 +336,7 @@ class TestBase_create(unittest.TestCase):
 
 
 class TestBase_load_from_file(unittest.TestCase):
-    """Unittests to test for load_from_file_method of Base class."""
+    """Unittests for testing load_from_file_method of Base class."""
 
     @classmethod
     def tearDown(self):
@@ -403,7 +402,7 @@ class TestBase_load_from_file(unittest.TestCase):
 
 
 class TestBase_save_to_file_csv(unittest.TestCase):
-    """Unittests to test for save_to_file_csv method of Base class."""
+    """Unittests for testing save_to_file_csv method of Base class."""
 
     @classmethod
     def tearDown(self):
@@ -481,7 +480,7 @@ class TestBase_save_to_file_csv(unittest.TestCase):
 
 
 class TestBase_load_from_file_csv(unittest.TestCase):
-    """Unittests to test for load_from_file_csv method of Base class."""
+    """Unittests for testing load_from_file_csv method of Base class."""
 
     @classmethod
     def tearDown(self):
