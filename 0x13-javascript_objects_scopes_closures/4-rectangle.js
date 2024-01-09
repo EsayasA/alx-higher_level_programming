@@ -9,12 +9,24 @@ class Rectangle {
 
   print () {
     for (let j = 0; j < this.height; j++) {
-      let a = '';
+      let st = '';
       for (let k = 0; k < this.width; k++) {
-        a += 'X';
+        st += 'X';
       }
-      console.log(a);
+      console.log(s);
     }
   }
+
+  rotate () {
+    const aux = this.width;
+    this.width = this.height;
+    this.height = aux;
+  }
+
+  double () {
+    this.width *= 2;
+    this.height *= 2;
+  }
 }
+
 module.exports = Rectangle;
