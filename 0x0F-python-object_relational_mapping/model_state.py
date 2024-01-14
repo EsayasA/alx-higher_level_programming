@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-contains the class definition of a State and an instance Base = declarative_base()
+Write a python file that contains the class definition of a State and an instance Base = declarative_base():
 """
 from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
@@ -9,9 +9,9 @@ mymetadata = MetaData()
 Base = declarative_base(metadata=mymetadata)
 
 
-class State(Base)
+class State(Base):
     """
-    Class with id and name.
+    Class of state with id and name
     """
     __tablename__ = 'states'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
