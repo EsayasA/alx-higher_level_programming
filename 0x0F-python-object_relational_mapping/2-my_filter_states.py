@@ -11,6 +11,6 @@ if __name__ == "__main__":
                 .format(sys.argv[4]))
     rw = cur.fetchall()
     for st in rw:
-        print(rw)
+        print(st)
     cur.close()
     db.close()
