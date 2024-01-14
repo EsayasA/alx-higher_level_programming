@@ -9,7 +9,7 @@ if __name__ == "__main__":
     cu = db.cursor()
     cu.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
                 .format(sys.argv[4]))
-    rw = cur.fetchall()
+    rw = cu.fetchall()
     for st in rw:
         print(st)
     cur.close()
