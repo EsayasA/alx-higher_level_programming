@@ -1,7 +1,7 @@
 #!/bin/bash
 # script takes URL and send requist then  displays
-# size of the response body
-# size in byte
-# use curl
+# the size of the response body
+# The size in byte
+# you use curl
 # script takes URL and send requist then  displays
 curl -sI "$1" | grep -i Content-Length | cut -d " " -f 2
