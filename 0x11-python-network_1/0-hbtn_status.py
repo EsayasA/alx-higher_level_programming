@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fetches the URL: https://intranet.hbtn.io/status"""
+"""Fetches the URL"""
 
 from urllib.request import Request, urlopen
 
@@ -7,8 +7,8 @@ from urllib.request import Request, urlopen
 if __name__ == "__main__":
     gi = Request('https://intranet.hbtn.io/status')
 
-    with urlopen(gi) as respnse:
-        content = response.read()
+    with urlopen(gi) as resullt:
+        content = result.read()
         utf8_content = content.decode('utf-8')
 
         print('Body response:')
