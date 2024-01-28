@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""You must use the GitHub API, here is the documentation 
-https://developer.github.com/v3/repos/commits/."""
+"""by using  the GitHub API, here is the documentation """
 import sys
 import requests
 
