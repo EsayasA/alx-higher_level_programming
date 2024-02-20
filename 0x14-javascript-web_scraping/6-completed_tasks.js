@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const req = require('req');
-req(process.argv[2], function (err, res, body) {
+const request = require('request');
+request(process.argv[2], function (err, res, body) {
   if (!err) {
     const todos = JSON.parse(body);
     const completed = {};
