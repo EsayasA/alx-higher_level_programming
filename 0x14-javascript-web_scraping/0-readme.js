@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const dr = require('dr');
+const fs = require('fs');
 
-dr.readFile(process.argv[2], 'utf-8', (error, info) => {
+fs.readFile(process.argv[2], 'utf-8', (error, info) => {
   if (error) {
     console.log(error);
   } else {
